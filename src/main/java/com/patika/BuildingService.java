@@ -1,5 +1,6 @@
 package com.patika;
 
+import com.patika.models.Building;
 import com.patika.models.House;
 import com.patika.models.SummerHouse;
 import com.patika.models.Villa;
@@ -36,8 +37,6 @@ public class BuildingService {
             house.setRoomCount(random.nextInt(3) + 1);
             house.setLivingRoomCount(1);
             house.setArea((house.getRoomCount() * (random.nextInt(35) + 20)) + (house.getLivingRoomCount() * (random.nextInt(50) + 20)));
-            house.setBathRoomCount(random.nextInt(1) + 1);
-            house.setAgeOfBuilding(random.nextInt(20));
             houseList.add(house);
 
             Building villa = new Villa();
@@ -45,8 +44,6 @@ public class BuildingService {
             villa.setRoomCount(random.nextInt(6) + 4);
             villa.setLivingRoomCount(random.nextInt(2) + 1);
             villa.setArea((villa.getRoomCount() * (random.nextInt(35) + 20)) + (villa.getLivingRoomCount() * (random.nextInt(50) + 20)));
-            villa.setBathRoomCount(random.nextInt(4) + 1);
-            villa.setAgeOfBuilding(random.nextInt(20));
             villaList.add(villa);
 
             Building summerHouse = new SummerHouse();
@@ -54,8 +51,6 @@ public class BuildingService {
             summerHouse.setRoomCount(random.nextInt(6) + 4);
             summerHouse.setLivingRoomCount(random.nextInt(2) + 1);
             summerHouse.setArea((summerHouse.getRoomCount() * (random.nextInt(35) + 20)) + (summerHouse.getLivingRoomCount() * (random.nextInt(50) + 20)));
-            summerHouse.setBathRoomCount(random.nextInt(4) + 1);
-            summerHouse.setAgeOfBuilding(random.nextInt(20));
             summerHouseList.add(summerHouse);
         }
     }
